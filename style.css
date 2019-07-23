@@ -1,23 +1,257 @@
-*{
+* {
+  /* Sterncen bedeutet "gilt für alle Elemente" */
   box-sizing: border-box;
 }
-body{
+
+body {
+  /* {zwischen den Klammern steht, wie etwas aussehen soll}. body { stylt den Body */
+  , Schriftfarbe schwarz,
   background-color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  /* Hintergrundfarbe weiß */
+  font-family: 'Ubuntu', sans-serif, Arial, sans-serif;
+  /* Schriftart: Ubuntu, Arial, sans serif */
   color: #000;
   line-height: 1.4;
   margin: 0;
 }
-a{
+
+nav a {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  }
-  #navi{
+}
+
+#navi ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  }
+}
+
 /*Das ist ein Kommentar */
-  #pageheader{background-color: white;}
+#pageheader {
+  background-color: white;
+  height: 60px;
+  position: fixed;
+  /*Header bleibt immer oben festgetackert */
+  width: 100%;
+  /*Header auf gesamte Länge ausgebreitet (immer) */
+}
+
+#burgerbutton {
+  background-color: transparent;
+  border: none;
+}
+
+#navi {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-left: 1rem;
+  /* 1 rem sind 16px */
+  margin-right: 1rem;
+}
+
+#navi.show {
+  /*Das, was im Navi bei der mobilen kleinen Version gezeigt werden soll */
+  display: flex;
+  position: fixed;
+  top: 60px;
+  /*Abstand vom oberen Rand*/
+  left: 0;
+  background: white;
+  width: 100%;
+  height: calc(100vh - 60px);
+    /*100 vh: Gesamtlänge, 60 px Header */
+    justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 4rem;
+}
+
+#intro {
+  background-image: url(img/intro.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro h1, #intro p, #intro h2 {
+  color: white;
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 10px;
+  border-width: 10px;
+  border: 1px solid #374A67;
+  background: white;
+  color: 374A67;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 1px 5px 6px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+
+.button:hover {
+  color: #fff;
+  background: #374A67;
+}
+
+#rezepte {
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #828282;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.card p {
+  color: #828282;
+}
+
+main .wrapper {
+  display: block;
+}
+
+.newsletter {
+  background: #04122b;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.newsletter p {
+  font-weight: bold;
+}
+
+.newsletter input {
+  /* Der Input /Eingabeteil vom Newsletter wird gestylt*/
+  padding: 10px;
+  /* Gleicher Paddingwert wie button */
+  border-radius: 4px;
+  /* runde Ecken */
+  border: none;
+}
+
+.button-blue {
+  color: white;
+  background: #374A67;
+}
+
+.button-blue:hover {
+  color: #374A67;
+  background: white;
+}
+
+.card img {
+  width: 100%;
+  /* Bild passt sich immer an Rahmen an */
+}
+
+#footer-nav ul, #social ul {
+  list-style: none;
+  margin: 0;
+  /*kein Rand */
+  padding: 0;
+  /*kein Zwischenrand */
+  text-align: center;
+}
+
+footer nav a {
+  /* Navielemente mit Links im Footer ansprechen */
+  text-transform: none;
+  /*keine Großbuchstaben, normale Schrift, Platz zwischen Worten */
+  margin-right: 1rem;
+  font-weight: normal;
+}
+
+#social ul {
+  /*Die Punkte der Navileiste sollen nebeneinander stehen */
+  display: flex;
+  justify-content: center;
+}
+
+#social a:hover {
+  /*a ist link und muss normalerweise angegeben werden. beim burgerbutton war es schon in der fkt eingebaut */
+  color: pink;
+}
+
+#social {
+  font-size: 2rem;
+}
+
+footer .wrapper {
+  display: block;
+  padding: 3rem 0;
+  /* über und unter Imressum etc. 3 rem Rand, an Seiten: 0 */
+}
+
+.overflow {
+  overflow: hidden;
+  /*Überschuss aus Seiten, Box: soll abgeschnitten werden. Default: scrollen */
+}
+
+@media (min-width: 960px) {
+
+  /* ab 960px Weite soll der Button nicht mehr angezeigt werden */
+  #burgerbutton {
+    display: none;
+  }
+
+  #navi {
+    display: block;
+  }
+
+  #navi ul {
+    display: flex;
+  }
+
+  #navi ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: auto;
+  }
+
+  .card {
+    /* .card: Artikel ansprechen */
+    float: left;
+    /* float: left: von links nach rechts anordnen */
+    width: calc(33.333% - 16px);
+    /* Rand an beiden Seiten abziehen */
+    margin: 8px;
+    /*  3 Artikel nebeneinander, jeder bekommt 33 % Platz, danach neue Reihe. Das Ganze -16 pixel, damit Platz für Rand ist auf beiden Seiten */
+  }
+
+  .row::after {
+    /* Alle Artikel sind in der class row und sollen gefloatet werden. Nach der row soll alles wieder clear sein */
+    content: "";
+    /* Wenn man floatet, kann leicht komisches Zeug passieren, wenn man nicht cleart */
+    display: block;
+    /* row::after: Pseudoelement in CSS, das das floaten beendet. Könnte auch "before" sein */
+    clear: both;
+  }
+
+  footer .wrapper, #footer-nav ul {
+    display: flex;
+  }
+}

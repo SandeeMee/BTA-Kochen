@@ -1,29 +1,49 @@
-<!doctype html>
+<!doctype html> <!-- Legt fest, dass es sich um HTML5 handelt -->
 <html>
+<!--Am Anfang immer html schreiben und Enter drücken, um die Datei in den HTML5-Modus zu bringen-->
 
 <head>
+  <!-- Anfang Head-->
   <meta charset="utf-8">
+  <!--Legt den Zeichenpool fest, Universalsprache mit fast allen Characters-->
   <title>BTA Kochen | Tolle Rezepte für Webworker</title>
-  <meta name="description" content="Die besten Rezepte ever, toll und einfach zubereitet.">
+  <meta name="description" content="Die besten Rezepte ever, toll und
+  einfach zubereitet.">
+  <!--Meta-Beschreibung für Google, wird erst bei Veröffentlichung sichtbar.-->
   <!-- Das ist ein Kommentar -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Stellt die Ansicht so ein, dass sie sich an das Gerät anpasst (Handy, Tablet, PC)-->
+  <link rel="stylesheet" href="style.css"> <!-- Verbindet die HTML- mit der CSS-Datei-->
+  <link rel="stylesheet" href="fonts/fonts.css">                                  <!-- fontstylesheet einbinden aus folder -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-</head>
+</head> <!-- Ende Head-->
 
 <body>
+  <!-- Anfang Body-->
   <header id="pageheader">
+    <!-- Erstellt den Pageheader (Kopfteil)-->
     <div class="wrapper">
+      <!-- div = divider, erstellt einen umschließenden Bereich mit dem Namen "wrapper"-->
 
       <a href="#">
-        <img src="img/logo.png" alt="Logo für Kochen BTA" width="50">
+        <!-- a bedeutet Link, href ist URL/Linktext-->
+        <img src="img/logo.png" alt="Logo für Kochen BTA" width="50"> <!-- img: Logo-Bild einfügen, src = Source (Dateiordner/Unterordner), ganz zu Beginn: mit File/add project folder einfügen-->
 
-      </a>
-      <nav>
-        <ul id="navi">
+      </a> <!-- Ende des Links (a)-->
+
+      <button type="button" name="button" id="burgerbutton">
+        <img src="img/menu.svg" alt="burger" height="40"> <!-- img mit Quelle und Alternativtext (alt) als Bildbeschreibung-->
+      </button>
+
+
+      <nav id="navi">
+        <!-- Element, in dem Navigationsleisten, Links und Menüs gruppert werden können. Die ID "navi" macht es in CSS verfügbar-->
+        <ul>
+          <!-- ul = ungeordnete Liste-->
           <li>
-            <a href="#">Home</a>
-          </li>
+            <!-- li = Listenunterpunkt-->
+            <a href="#">Home</a> <!-- Link mit Menüunterpunkt-->
+          </li> <!-- Ende Listenunterpunkt-->
           <li>
             <a href="#">Rezepte</a>
           </li>
@@ -37,6 +57,221 @@
       </nav>
     </div>
   </header>
-</body>
+  <main>
+    <!--Main: Hauptteil-->
+    <section id="intro">
+      <!--Beginn der Section "intro", bekommt ID, damit sie später in CSS "ansprechbar" ist-->
+      <div>
+        <!-- div: abgegrenzter Container-->
 
-</html>
+        <h1>SCHL@MMERTIME!</h1>
+        <!--h1: Hauptüberschrift, sollte nur 1x pro Dokument /position vergeben werden, dann h2, h3 etc.-->
+        <h2>Die besten Rezepte für Webworker</h2>
+        <!--Untertitel o.ä. -->
+        <p>Es gibt mehr als Pizza und Pommes</p>
+        <!--p = Pargraph -->
+        <a href="#" class="button">Entdecke die Schlemmereien</a>
+        <!--Link auf andere Seite, der mittels eines Buttons funktioniert.-->
+
+      </div>
+      <!--Ende der Section  h1-h2-p-a in der Section "intro".-->
+
+    </section>
+    <!--Ende der Section "intro".-->
+    <section id="rezepte">
+      <!-- der Section "Rezepte" mit Artikel, Bilde, Überschrift.-->
+      <div class="wrapper">
+        <!--Ein neuer Container, wo die h2-Überschrift "Die neuesten Rezepte" untergebracht wird.-->
+        <h2>Die neuesten Rezepte</h2>
+        <!--- h2 Überschrift -->
+        <div class="row">
+          <!--Ende des Containers 'div', dem die Klasse "row" (Reihe) zugeordnet wird.-->
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+          <article class="card">
+            <!--Artikel, dem die Klasse "card" zugeordnet wird. Zu Card gehören:-->
+            <img src="img/burger.jpg" alt="Burger">
+            <!--Bild vom Burger-->
+            <h3>Total leckere Vegi-Burger</h3>
+            <!--Überschrift 3. Ranges-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              <!--Paragraf mit Text-->
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="button button-blue">ZUM REZEPT</a>
+            <!--Button, der wie ein Link funktioniert.-->
+          </article>
+
+
+
+
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <aside class="newsletter">
+    <!--Nebencontent (Sidebar oder drunter) -->
+    <p>Kein Rezept mehr verpassen: <br> Hol dir unseren Newsletter!</p>
+    <!--Paragraph, könnte auch h2 oder h3 sein. 2 Zeilen mit break getrennt br -->
+    <form class="" action="index.html" method="post">
+      <!--Formular erstellen -->
+      <input type="Email" name="email" value="" placeholder="Deine Emailadresse"> <!-- Eingabeschlitz für Email, placeholder ist ausgegraut und verschwindet bei Eingabe, es würden auch gehen: password, checkbox, date, select, colorpicker, range -->
+      <button type="submit" name="button" class="button">Abonnieren</button>
+      <!--Button zum Abonnieren. class button: macht ihn erhaben-->
+
+    </form>
+
+  </aside>
+
+  <footer>
+    <div class="wrapper">
+      <nav id="footer-nav">
+        <ul>
+          <li>
+            <a href="#">Impressum</a>
+          </li>
+
+          <li>
+            <a href="#">Datenschutz</a>
+          </li>
+          <li>
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav id="social">
+        <ul>
+          <li class="icon-facebook">
+            <a href="#"></a>
+          </li>
+          <li class="icon-instagram">
+            <a href="#"></a>
+          </li>
+          <li class="icon-youtube">
+            <a href="#"></a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/menu.js">
+
+
+  </script>
+  <!--Ende des Scripts.-->
+</body> <!-- Ende des Teils "Body".-->
+
+
+
+</html> <!-- Ende des HTML-Dokuments-->
+
+<!-- Tipps: Anfangs alle nötigen Dokumente importieren über file/add project und speichern.-->
+<!-- Jedes HTML-Dokument mit html und Enter beginnen. Dann gibt es ein Basic HTML doc. -->
+<!-- Auf Leerzeichen achten, alles klein schreiben, keine Umlaute, außer im sichtbaren Text.-->
+<!-- Funktionen werden vorgeschlagen, wenn man Anfangsbuchstaben eingibt. -->
+<!-- Regelmäßig Strg und s drücken zum Speichern. -->
+<!-- Bearbeitete Dokumente refreshen, um Veränderungen zu sehen. -->
+<!-- in HTML werden id und class vergeben, die man in CSS dann ansprechen kann. -->
+<!-- Startseite "index.html" nennen und lokal speichern (Desktop oder Dokumente)-->
+<!-- Head = SEO/Metacontent, der im Doc nicht sichtbar ist (später in der Suchmaschine) (Wie Gedanken im Kopf) -->
+<!-- Body = Das, was man später sieht (wie der Körper im Gegensatz zu den Gedanken) -->
+<!-- Body besteht aus: Header (Kopf, Navileiste), Main (Rumpf, Hauptcontent/ aside), Footer (Fußleiste)-->
